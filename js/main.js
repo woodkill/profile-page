@@ -8,8 +8,7 @@ const htmlElement = document.documentElement;
 // localStorage에서 테마 설정 불러오기
 function initializeTheme() {
     const savedTheme = localStorage.getItem('theme');
-    const isDark = savedTheme === 'dark' ||
-                   (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    const isDark = savedTheme === 'dark';
 
     if (isDark) {
         htmlElement.classList.add('dark');
